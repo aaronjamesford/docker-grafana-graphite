@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: aaronjamesford/grafana-graphite
-  tag: stable
+  tag: latest
   pullPolicy: IfNotPresent
 
 service:
@@ -19,10 +19,10 @@ service:
     - name: graphite-web
       port: 81
       protocol: TCP
-    - name: statsd-collector
+    - name: statsd-c
       port: 8125
       protocol: UDP
-    - name: statsd-management
+    - name: statsd-m
       port: 8126
       protocol: TCP
     - name: graphite-carbon
